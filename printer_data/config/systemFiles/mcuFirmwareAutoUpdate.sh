@@ -1,6 +1,5 @@
 sudo service klipper stop
 cd ~/klipper
-git pull
 
 make clean KCONFIG_CONFIG=btt_skr_mini_e3_v1.2_klipper.config
 make menuconfig KCONFIG_CONFIG=btt_skr_mini_e3_v1.2_klipper.config
@@ -13,7 +12,7 @@ read -p "BTT SKR E3 Mini V1.2 firmware flashed, please check above for any error
 make clean KCONFIG_CONFIG=voron_klipper_expander_klipper.config
 make menuconfig KCONFIG_CONFIG=voron_klipper_expander_klipper.config
 make -j4 KCONFIG_CONFIG=voron_klipper_expander_klipper.config
-read -p "Obitool O2S firmware built, please check above for any errors. Press [Enter] to continue flashing, or [Ctrl+C] to abort"
+read -p "Klipper Expander firmware built, please check above for any errors. Press [Enter] to continue flashing, or [Ctrl+C] to abort"
 
 make -j4 KCONFIG_CONFIG=voron_klipper_expander_klipper.config flash FLASH_DEVICE=0483:df11
 read -p "Klipper Expander firmware flashed, please check above for any errors. Press [Enter] to continue, or [Ctrl+C] to abort"
